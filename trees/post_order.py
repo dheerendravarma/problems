@@ -9,7 +9,7 @@ Test Cases
 def post_order(root: TreeNode) -> List:
     if root is None:
         return []
-    return post_order(root.left) + [root.data] + post_order(root.right)
+    return post_order(root.left) + post_order(root.right) + [root.data]
 
 
 def main():

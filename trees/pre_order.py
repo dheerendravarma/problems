@@ -5,7 +5,7 @@ from typing import List
 def pre_order(root: TreeNode) -> List:
     if root is None:
         return []
-    return pre_order(root.left) + [root.data] + pre_order(root.right)
+    return [root.data] + pre_order(root.left) + pre_order(root.right)
 
 def main():
     test_cases: int = int(input())

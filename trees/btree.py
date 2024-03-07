@@ -1,4 +1,4 @@
-from trees import TreeNode, buid_tree
+from trees import TreeNode, buid_tree_iter
 
 
 """
@@ -10,7 +10,7 @@ def main():
     test_cases: int = int(input())
     for _ in range(test_cases):
         tree_str = input()
-        root: TreeNode = buid_tree(tree_str)
+        root: TreeNode = build_tree_iter(tree_str)
         print(root.data)
 
 if __name__ == "__main__":

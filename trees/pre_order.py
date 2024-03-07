@@ -1,4 +1,4 @@
-from trees import TreeNode, buid_tree
+from trees import TreeNode, buid_tree_iter
 from typing import List
 
 
@@ -11,7 +11,7 @@ def main():
     test_cases: int = int(input())
     for _ in range(test_cases):
         tree_str = input()
-        root = buid_tree(tree_str)
+        root = build_tree_iter(tree_str)
         pre_order_list = pre_order(root)
         print(" ".join(pre_order_list))
 

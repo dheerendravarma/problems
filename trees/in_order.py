@@ -1,4 +1,4 @@
-from trees import TreeNode, buid_tree
+from trees import TreeNode, buid_tree_iter
 from typing import List
 
 """
@@ -18,7 +18,7 @@ def main():
     results = []
     for _ in range(test_cases):
         tree_str: str = input()
-        root: TreeNode = buid_tree(tree_str)
+        root: TreeNode = build_tree_iter(tree_str)
         inorder_list: List = in_order(root)
         results.append(inorder_list)
     for res in results:

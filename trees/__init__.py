@@ -7,7 +7,7 @@ class TreeNode:
         self.right = None
         self.data = value
 
-def buid_tree_rec(tree_str: str) -> Optional[TreeNode]:
+def build_tree_rec(tree_str: str) -> Optional[TreeNode]:
     # Return Empty Tree If no nodes found in the String
     if len(tree_str) == 0 or tree_str[0] == "N":
         return
@@ -26,7 +26,7 @@ def buid_tree_rec(tree_str: str) -> Optional[TreeNode]:
     return build_node(0)
 
 
-def buid_tree_iter(tree_str: str) -> Optional[TreeNode]:
+def build_tree_iter(tree_str: str) -> Optional[TreeNode]:
     # Return Empty Tree If no nodes found in the String
     if len(tree_str) == 0 or tree_str[0] == "N":
         return

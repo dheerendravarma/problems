@@ -1,4 +1,4 @@
-from trees import TreeNode, buid_tree_iter
+from trees import TreeNode, build_tree_iter
 
 
 """

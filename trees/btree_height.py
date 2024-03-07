@@ -1,4 +1,4 @@
-from trees import TreeNode, buid_tree
+from trees import TreeNode, buid_tree_iter
 
 """
 Test Cases
@@ -6,6 +6,11 @@ Test Cases
 1 2 3 N N N N
 2 N 1 N N 3 N N N N N N N
 1 2 N 3 N N N 4 N N N N N N N N N
+
+Output
+2
+3
+4
 """
 def get_height(root: TreeNode) -> int:
     if root is None:
@@ -18,7 +23,7 @@ def main():
     results = []
     for _ in range(test_cases):
         tree_str: str = input()
-        root: TreeNode = buid_tree(tree_str)
+        root: TreeNode = buid_tree_iter(tree_str)
         height: int = get_height(root)
         results.append(height)
     for res in results:

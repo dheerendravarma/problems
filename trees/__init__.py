@@ -7,7 +7,7 @@ class TreeNode:
         self.right = None
         self.data = value
 
-def buid_tree(tree_str: str) -> Optional[TreeNode]:
+def buid_tree_rec(tree_str: str) -> Optional[TreeNode]:
     # Return Empty Tree If no nodes found in the String
     if len(tree_str) == 0 or tree_str[0] == "N":
         return
@@ -24,3 +24,34 @@ def buid_tree(tree_str: str) -> Optional[TreeNode]:
         return None
 
     return build_node(0)
+
+
+def buid_tree_iter(tree_str: str) -> Optional[TreeNode]:
+    # Return Empty Tree If no nodes found in the String
+    if len(tree_str) == 0 or tree_str[0] == "N":
+        return
+    
+    input_nodes = list(map(str, tree_str.split()))
+    nodes_length = len(input_nodes)
+
+    root_node = TreeNode(input_nodes[0])
+    queue = [(0, root_node)]
+
+    idx = 1
+    while idx < nodes_length and queue:
+        node_idx, node = queue.pop(0)
+
+        left_child_idx = 2 * node_idx + 1
+        if left_child_idx < nodes_length and input_nodes[left_child_idx] != "N":
+            left_node = TreeNode(input_nodes[left_child_idx])
+            node.left = left_node
+            queue.append((left_child_idx, left_node))
+        
+        right_child_idx = 2 * node_idx + 2
+        if right_child_idx < nodes_length and input_nodes[right_child_idx] != "N":
+            right_node = TreeNode(input_nodes[right_child_idx])
+            node.right = right_node
+            queue.append((right_child_idx, right_node))
+        
+        idx += 1
+    return root_node

@@ -15,6 +15,8 @@ Output
 4 3 2 1
 2 7 5 4 6 3 1
 """
+
+
 def post_order(root: TreeNode) -> List:
     if root is None:
         return []
@@ -31,6 +33,7 @@ def main():
         results.append(inorder_list)
     for res in results:
         print(" ".join(res))
+
 
 if __name__ == "__main__":
     main()

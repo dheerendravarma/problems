@@ -14,6 +14,8 @@ Output
 1 2 3 4
 1 2 3 4 6 5 7
 """
+
+
 def level_order(root: TreeNode) -> list:
     if root is None:
         return []
@@ -26,10 +28,10 @@ def level_order(root: TreeNode) -> list:
 
         if node.left:
             queue.append(node.left)
-        
+
         if node.right:
             queue.append(node.right)
-    
+
     return order_list
 
 
@@ -41,7 +43,7 @@ def main():
         root: TreeNode = build_tree(tree_str)
         level_order_list: list = level_order(root)
         results.append(level_order_list)
-    
+
     for res in results:
         print(" ".join(res))
 

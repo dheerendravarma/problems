@@ -15,10 +15,13 @@ Output
 1 2 3 4
 1 2 3 4 5 7 6
 """
+
+
 def pre_order(root: TreeNode) -> List:
     if root is None:
         return []
     return [root.data] + pre_order(root.left) + pre_order(root.right)
+
 
 def main():
     test_cases: int = int(input())

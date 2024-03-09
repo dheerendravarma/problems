@@ -14,6 +14,8 @@ Output
 4
 5
 """
+
+
 def get_height(root: TreeNode) -> int:
     if root is None:
         return 0
@@ -30,6 +32,7 @@ def main():
         results.append(height)
     for res in results:
         print(res)
+
 
 if __name__ == "__main__":
     main()

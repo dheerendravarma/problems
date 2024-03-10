@@ -1,5 +1,6 @@
-from trees import TreeNode, build_tree
 from typing import List
+
+from trees import TreeNode, build_tree
 
 """
 Test Cases

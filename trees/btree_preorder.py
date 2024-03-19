@@ -18,10 +18,30 @@ Output
 """
 
 
-def pre_order(root: TreeNode) -> List:
+def pre_order_recursive(root: TreeNode) -> List:
     if root is None:
         return []
-    return [root.data] + pre_order(root.left) + pre_order(root.right)
+    return (
+        [root.data] + pre_order_recursive(root.left) + pre_order_recursive(root.right)
+    )
+
+
+def pre_order_iterative(root: TreeNode) -> List:
+    if root is None:
+        return []
+    stack = [root]
+    pre_order_list = []
+    while stack:
+        node = stack.pop(-1)
+        pre_order_list.append(node.data)
+
+        if node.right:
+            stack.append(node.right)
+
+        if node.left:
+            stack.append(node.left)
+
+    return pre_order_list
 
 
 def main():
@@ -30,7 +50,7 @@ def main():
     for _ in range(test_cases):
         tree_str: str = input()
         root: TreeNode = build_tree(tree_str)
-        inorder_list: List = pre_order(root)
+        inorder_list: List = pre_order_iterative(root)
         results.append(inorder_list)
     for res in results:
         print(" ".join(res))

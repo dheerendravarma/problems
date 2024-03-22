@@ -18,10 +18,29 @@ Output
 """
 
 
-def in_order(root: TreeNode) -> List:
+def in_order_recursive(root: TreeNode) -> List:
     if root is None:
         return []
-    return in_order(root.left) + [root.data] + in_order(root.right)
+    return in_order_recursive(root.left) + [root.data] + in_order_recursive(root.right)
+
+
+def in_order_iterative(root: TreeNode) -> List:
+    if root is None:
+        return []
+    result = []
+    stack = []
+    current = root
+    while stack or current:
+        if current is not None:
+            stack.insert(0, current)
+            current = current.left
+        else:
+            if not stack:
+                break
+            current = stack.pop(0)
+            result.append(current.data)
+            current = current.right
+    return result
 
 
 def main():
@@ -30,7 +49,7 @@ def main():
     for _ in range(test_cases):
         tree_str: str = input()
         root: TreeNode = build_tree(tree_str)
-        inorder_list: List = in_order(root)
+        inorder_list: List = in_order_iterative(root)
         results.append(inorder_list)
     for res in results:
         print(" ".join(res))

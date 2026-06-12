@@ -71,7 +71,10 @@ mod tests {
     fn test_preorder_iterative() {
         assert_eq!(pre_order_iterative(&build_tree("1 2 3")), vec![1, 2, 3]);
         assert_eq!(pre_order_iterative(&build_tree("2 N 1 3 N")), vec![2, 1, 3]);
-        assert_eq!(pre_order_iterative(&build_tree("1 2 N 3 N 4 N")), vec![1, 2, 3, 4]);
+        assert_eq!(
+            pre_order_iterative(&build_tree("1 2 N 3 N 4 N")),
+            vec![1, 2, 3, 4]
+        );
         assert_eq!(
             pre_order_iterative(&build_tree("1 2 3 N N 4 6 N 5 N N 7 N")),
             vec![1, 2, 3, 4, 5, 7, 6]

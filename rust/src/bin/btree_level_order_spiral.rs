@@ -29,7 +29,7 @@ fn level_order_spiral(root: &TreeLink) -> Vec<i64> {
     while !current_level.is_empty() {
         let data: Vec<i64> = current_level.iter().map(|n| n.borrow().data).collect();
 
-        if level % 2 == 0 {
+        if level.is_multiple_of(2) {
             result.extend(data.iter().rev());
         } else {
             result.extend(data.iter());
@@ -74,7 +74,10 @@ mod tests {
     fn test_spiral() {
         assert_eq!(level_order_spiral(&build_tree("1 2 3")), vec![1, 2, 3]);
         assert_eq!(level_order_spiral(&build_tree("2 N 1 3 N")), vec![2, 1, 3]);
-        assert_eq!(level_order_spiral(&build_tree("1 2 N 3 N 4 N")), vec![1, 2, 3, 4]);
+        assert_eq!(
+            level_order_spiral(&build_tree("1 2 N 3 N 4 N")),
+            vec![1, 2, 3, 4]
+        );
         assert_eq!(
             level_order_spiral(&build_tree("1 2 3 N N 4 6 N 5 N N 7 N")),
             vec![1, 2, 3, 6, 4, 5, 7]

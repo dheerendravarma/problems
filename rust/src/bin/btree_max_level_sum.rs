@@ -73,6 +73,9 @@ mod tests {
         assert_eq!(get_max_level_sum(&build_tree("1 2 3")), 2);
         assert_eq!(get_max_level_sum(&build_tree("2 N 1 3 N")), 3);
         assert_eq!(get_max_level_sum(&build_tree("1 2 N 3 N 4 N")), 4);
-        assert_eq!(get_max_level_sum(&build_tree("1 2 3 N N 4 6 N 5 N N 7 N")), 3);
+        assert_eq!(
+            get_max_level_sum(&build_tree("1 2 3 N N 4 6 N 5 N N 7 N")),
+            3
+        );
     }
 }

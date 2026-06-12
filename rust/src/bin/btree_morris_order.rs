@@ -79,8 +79,14 @@ mod tests {
     #[test]
     fn test_morris_order() {
         assert_eq!(morris_order_traversal(&build_tree("1 2 3")), vec![2, 1, 3]);
-        assert_eq!(morris_order_traversal(&build_tree("2 N 1 3 N")), vec![2, 3, 1]);
-        assert_eq!(morris_order_traversal(&build_tree("1 2 N 3 N 4 N")), vec![4, 3, 2, 1]);
+        assert_eq!(
+            morris_order_traversal(&build_tree("2 N 1 3 N")),
+            vec![2, 3, 1]
+        );
+        assert_eq!(
+            morris_order_traversal(&build_tree("1 2 N 3 N 4 N")),
+            vec![4, 3, 2, 1]
+        );
         assert_eq!(
             morris_order_traversal(&build_tree("1 2 3 N N 4 6 N 5 N N 7 N")),
             vec![2, 1, 4, 7, 5, 3, 6]

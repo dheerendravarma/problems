@@ -1,9 +1,6 @@
-from typing import List
-
-from trees import TreeNode, build_tree
+from tree import TreeNode, build_tree
 
 """
-https://www.geeksforgeeks.org/problems/largest-value-in-each-level/1
 Test Cases
 4
 1 2 3
@@ -12,22 +9,26 @@ Test Cases
 1 2 3 N N 4 6 N 5 N N 7 N
 
 Output
-1 3
-2 1 3
-1 2 3 4
-1 3 6 5 7
+2
+3
+4
+3
 """
 
 
-def get_max_level_values(root: TreeNode) -> List[int]:
+def get_max_level_sum(root: TreeNode) -> int:
     if root is None:
         return 0
     queue = [root]
-    result = []
-
+    max_sum = float("-inf")
+    level = 1
+    max_level = level
     while queue:
-        max_level_value = max([int(node.data) for node in queue])
-        result.append(max_level_value)
+        max_level_sum = sum([int(node.data) for node in queue])
+
+        if max_level_sum > max_sum:
+            max_sum = max_level_sum
+            max_level = level
 
         next_level_nodes = []
         for node in queue:
@@ -37,8 +38,8 @@ def get_max_level_values(root: TreeNode) -> List[int]:
             if node.right:
                 next_level_nodes.append(node.right)
 
-        queue = next_level_nodes
-    return result
+        queue, level = next_level_nodes, level + 1
+    return max_level
 
 
 def main():
@@ -47,11 +48,11 @@ def main():
     for _ in range(test_cases):
         tree_str: str = input()
         root: TreeNode = build_tree(tree_str)
-        max_level: int = get_max_level_values(root)
+        max_level: int = get_max_level_sum(root)
         results.append(max_level)
 
     for res in results:
-        print(" ".join([str(val) for val in res]))
+        print(res)
 
 
 if __name__ == "__main__":

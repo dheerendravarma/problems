@@ -1,0 +1,44 @@
+[package]
+name = "tree"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "btree"
+path = "src/bin/btree.rs"
+
+[[bin]]
+name = "btree_height"
+path = "src/bin/btree_height.rs"
+
+[[bin]]
+name = "btree_inorder"
+path = "src/bin/btree_inorder.rs"
+
+[[bin]]
+name = "btree_preorder"
+path = "src/bin/btree_preorder.rs"
+
+[[bin]]
+name = "btree_postorder"
+path = "src/bin/btree_postorder.rs"
+
+[[bin]]
+name = "btree_level_order"
+path = "src/bin/btree_level_order.rs"
+
+[[bin]]
+name = "btree_level_order_spiral"
+path = "src/bin/btree_level_order_spiral.rs"
+
+[[bin]]
+name = "btree_max_level_values"
+path = "src/bin/btree_max_level_values.rs"
+
+[[bin]]
+name = "btree_max_level_sum"
+path = "src/bin/btree_max_level_sum.rs"
+
+[[bin]]
+name = "btree_morris_order"
+path = "src/bin/btree_morris_order.rs"

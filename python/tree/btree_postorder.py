@@ -1,4 +1,6 @@
-from trees import TreeNode, build_tree
+from typing import List
+
+from tree import TreeNode, build_tree
 
 """
 Test Cases
@@ -9,17 +11,17 @@ Test Cases
 1 2 3 N N 4 6 N 5 N N 7 N
 
 Output
-2
-3
-4
-5
+2 3 1
+3 1 2
+4 3 2 1
+2 7 5 4 6 3 1
 """
 
 
-def get_height(root: TreeNode) -> int:
+def post_order(root: TreeNode) -> List:
     if root is None:
-        return 0
-    return max(get_height(root.left), get_height(root.right)) + 1
+        return []
+    return post_order(root.left) + post_order(root.right) + [root.data]
 
 
 def main():
@@ -28,10 +30,10 @@ def main():
     for _ in range(test_cases):
         tree_str: str = input()
         root: TreeNode = build_tree(tree_str)
-        height: int = get_height(root)
-        results.append(height)
+        inorder_list: List = post_order(root)
+        results.append(inorder_list)
     for res in results:
-        print(res)
+        print(" ".join(res))
 
 
 if __name__ == "__main__":

@@ -1,5 +1,6 @@
-
 def second_largest_naive(numbers):
+    pass
+
 def main():
     numbers = list(map(int, input().split(" ")))
 

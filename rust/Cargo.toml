@@ -42,3 +42,7 @@ path = "src/bin/btree_max_level_sum.rs"
 [[bin]]
 name = "btree_morris_order"
 path = "src/bin/btree_morris_order.rs"
+
+[[bin]]
+name = "second_largest"
+path = "src/bin/array/second_largest.rs"

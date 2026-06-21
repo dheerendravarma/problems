@@ -67,7 +67,6 @@ fn main() {
     let stdin = io::stdin();
     let line = stdin.lock().lines().next().unwrap().unwrap();
     let numbers: Vec<i64> = line
-        .trim()
         .split_whitespace()
         .map(|s| s.parse().unwrap())
         .collect();

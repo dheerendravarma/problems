@@ -10,16 +10,24 @@ Output (naive / two-pass / optimal per input line)
 9
 */
 
-use std::collections::BTreeSet;
 use std::io::{self, BufRead};
 
-// Naive: deduplicate then sort — mirrors sorted(set(numbers))[-2]
+// Sort ascending, then scan backwards past all copies of the largest
+// to find the first strictly smaller value — the second distinct maximum.
+// Time: O(n log n)  Space: O(n)
 fn second_largest_naive(numbers: &[i64]) -> i64 {
-    let unique: BTreeSet<i64> = numbers.iter().cloned().collect();
-    if unique.len() < 2 {
+    if numbers.len() < 2 {
         return -1;
     }
-    *unique.iter().nth_back(1).unwrap()
+    let mut sorted: Vec<i64> = numbers.to_vec();
+    sorted.sort();
+    let largest: i64 = *sorted.last().unwrap();
+    for &val in sorted.iter().rev().skip(1) {
+        if val != largest {
+            return val;
+        }
+    }
+    -1
 }
 
 // Two-pass: find max first, then scan for the largest value strictly below it

@@ -1,9 +1,16 @@
 def second_largest_naive(numbers: list[int]) -> int:
-    # Deduplicate so equal copies of the largest don't shadow the true second
-    # distinct maximum, then sort ascending. The second-largest is at index -2.
+    # Sort ascending, then walk backwards past all copies of the largest
+    # to find the first strictly smaller value — the second distinct maximum.
     # Time: O(n log n)  Space: O(n)
-    unique_numbers: list[int] = sorted(set(numbers))
-    return unique_numbers[-2] if len(unique_numbers) >= 2 else -1
+    if len(numbers) < 2:
+        return -1
+    sorted_numbers: list[int] = sorted(numbers)
+    largest: int = sorted_numbers[-1]
+    val: int
+    for val in reversed(sorted_numbers[:-1]):
+        if val != largest:
+            return val
+    return -1
 
 
 def second_largest_two_pass(numbers: list[int]) -> int:

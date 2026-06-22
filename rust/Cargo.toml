@@ -46,3 +46,7 @@ path = "src/bin/btree_morris_order.rs"
 [[bin]]
 name = "second_largest"
 path = "src/bin/array/second_largest.rs"
+
+[[bin]]
+name = "third_largest"
+path = "src/bin/array/third_largest.rs"

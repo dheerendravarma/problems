@@ -50,3 +50,7 @@ path = "src/bin/array/second_largest.rs"
 [[bin]]
 name = "third_largest"
 path = "src/bin/array/third_largest.rs"
+
+[[bin]]
+name = "concatenation_array"
+path = "src/bin/array/concatenation_array.rs"

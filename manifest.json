@@ -1,0 +1,30 @@
+{
+  "problems": [
+    {
+      "number": 4,
+      "title": "Contains Duplicate",
+      "slug": "contains-duplicate",
+      "difficulty": "easy",
+      "tags": ["Array", "Hash Table"],
+      "approaches": {
+        "naive": {
+          "label": "Brute force",
+          "time": "O(n²)",
+          "space": "O(1)"
+        },
+        "better": {
+          "label": "Sort",
+          "time": "O(n log n)",
+          "space": "O(n)"
+        },
+        "optimal": {
+          "label": "Hash map",
+          "time": "O(n)",
+          "space": "O(n)"
+        }
+      },
+      "pythonPath": "python/array/contains_duplicate.py",
+      "rustPath": "rust/src/bin/array/contains_duplicate.rs"
+    }
+  ]
+}

@@ -54,3 +54,7 @@ path = "src/bin/array/third_largest.rs"
 [[bin]]
 name = "concatenation_array"
 path = "src/bin/array/concatenation_array.rs"
+
+[[bin]]
+name = "contains_duplicate"
+path = "src/bin/array/contains_duplicate.rs"

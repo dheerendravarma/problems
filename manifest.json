@@ -25,6 +25,32 @@
       },
       "pythonPath": "python/array/contains_duplicate.py",
       "rustPath": "rust/src/bin/array/contains_duplicate.rs"
+    },
+    {
+      "number": 5,
+      "title": "Valid Anagram",
+      "slug": "valid-anagram",
+      "difficulty": "easy",
+      "tags": ["String", "Hash Table"],
+      "approaches": {
+        "naive": {
+          "label": "Sort",
+          "time": "O(n log n)",
+          "space": "O(n)"
+        },
+        "better": {
+          "label": "Hash map",
+          "time": "O(n)",
+          "space": "O(n)"
+        },
+        "optimal": {
+          "label": "Count array",
+          "time": "O(n)",
+          "space": "O(1)"
+        }
+      },
+      "pythonPath": "python/array/valid_anagram.py",
+      "rustPath": "rust/src/bin/array/valid_anagram.rs"
     }
   ]
 }

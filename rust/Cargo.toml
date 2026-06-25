@@ -58,3 +58,7 @@ path = "src/bin/array/concatenation_array.rs"
 [[bin]]
 name = "contains_duplicate"
 path = "src/bin/array/contains_duplicate.rs"
+
+[[bin]]
+name = "valid_anagram"
+path = "src/bin/array/valid_anagram.rs"

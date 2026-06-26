@@ -51,6 +51,32 @@
       },
       "pythonPath": "python/array/valid_anagram.py",
       "rustPath": "rust/src/bin/array/valid_anagram.rs"
+    },
+    {
+      "number": 6,
+      "title": "Two Sum",
+      "slug": "two-sum",
+      "difficulty": "easy",
+      "tags": ["Array", "Hash Table"],
+      "approaches": {
+        "naive": {
+          "label": "Naive",
+          "time": "O(n²)",
+          "space": "O(1)"
+        },
+        "better": {
+          "label": "Two-pass",
+          "time": "O(n)",
+          "space": "O(n)"
+        },
+        "optimal": {
+          "label": "One-pass",
+          "time": "O(n)",
+          "space": "O(n)"
+        }
+      },
+      "pythonPath": "python/array/two_sum.py",
+      "rustPath": "rust/src/bin/array/two_sum.rs"
     }
   ]
 }

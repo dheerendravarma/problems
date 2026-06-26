@@ -62,3 +62,7 @@ path = "src/bin/array/contains_duplicate.rs"
 [[bin]]
 name = "valid_anagram"
 path = "src/bin/array/valid_anagram.rs"
+
+[[bin]]
+name = "two_sum"
+path = "src/bin/array/two_sum.rs"

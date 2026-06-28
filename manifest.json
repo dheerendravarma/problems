@@ -91,9 +91,9 @@
           "space": "O(1)"
         },
         "optimal": {
-          "label": "Endpoints",
-          "time": "O(m)",
-          "space": "O(1)"
+          "label": "Sort",
+          "time": "O(n·m log n)",
+          "space": "O(n·m)"
         }
       },
       "pythonPath": "python/array/longest_common_prefix.py",

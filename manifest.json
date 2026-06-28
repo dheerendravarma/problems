@@ -77,6 +77,27 @@
       },
       "pythonPath": "python/array/two_sum.py",
       "rustPath": "rust/src/bin/array/two_sum.rs"
+    },
+    {
+      "number": 7,
+      "title": "Longest Common Prefix",
+      "slug": "longest-common-prefix",
+      "difficulty": "easy",
+      "tags": ["String"],
+      "approaches": {
+        "naive": {
+          "label": "Vertical",
+          "time": "O(n·m)",
+          "space": "O(1)"
+        },
+        "optimal": {
+          "label": "Endpoints",
+          "time": "O(m)",
+          "space": "O(1)"
+        }
+      },
+      "pythonPath": "python/array/longest_common_prefix.py",
+      "rustPath": "rust/src/bin/array/longest_common_prefix.rs"
     }
   ]
 }

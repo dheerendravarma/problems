@@ -70,3 +70,7 @@ path = "src/bin/array/two_sum.rs"
 [[bin]]
 name = "longest_common_prefix"
 path = "src/bin/array/longest_common_prefix.rs"
+
+[[bin]]
+name = "remove_element"
+path = "src/bin/array/remove_element.rs"

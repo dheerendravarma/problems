@@ -98,6 +98,27 @@
       },
       "pythonPath": "python/array/longest_common_prefix.py",
       "rustPath": "rust/src/bin/array/longest_common_prefix.rs"
+    },
+    {
+      "number": 8,
+      "title": "Remove Element",
+      "slug": "remove-element",
+      "difficulty": "easy",
+      "tags": ["Array", "Two Pointers"],
+      "approaches": {
+        "naive": {
+          "label": "Extra array",
+          "time": "O(n)",
+          "space": "O(n)"
+        },
+        "optimal": {
+          "label": "Two pointers",
+          "time": "O(n)",
+          "space": "O(1)"
+        }
+      },
+      "pythonPath": "python/array/remove_element.py",
+      "rustPath": "rust/src/bin/array/remove_element.rs"
     }
   ]
 }

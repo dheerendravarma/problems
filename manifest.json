@@ -119,6 +119,32 @@
       },
       "pythonPath": "python/array/remove_element.py",
       "rustPath": "rust/src/bin/array/remove_element.rs"
+    },
+    {
+      "number": 9,
+      "title": "Majority Element",
+      "slug": "majority-element",
+      "difficulty": "easy",
+      "tags": ["Array", "Hash Table"],
+      "approaches": {
+        "naive": {
+          "label": "Sort",
+          "time": "O(n log n)",
+          "space": "O(1)"
+        },
+        "better": {
+          "label": "Hash map",
+          "time": "O(n)",
+          "space": "O(n)"
+        },
+        "optimal": {
+          "label": "Boyer-Moore",
+          "time": "O(n)",
+          "space": "O(1)"
+        }
+      },
+      "pythonPath": "python/array/majority_element.py",
+      "rustPath": "rust/src/bin/array/majority_element.rs"
     }
   ]
 }

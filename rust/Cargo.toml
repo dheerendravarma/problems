@@ -74,3 +74,7 @@ path = "src/bin/array/longest_common_prefix.rs"
 [[bin]]
 name = "remove_element"
 path = "src/bin/array/remove_element.rs"
+
+[[bin]]
+name = "majority_element"
+path = "src/bin/array/majority_element.rs"
